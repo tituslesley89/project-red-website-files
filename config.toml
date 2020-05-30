@@ -1,11 +1,12 @@
 ######################## default configuration ####################
-baseURL = "https://examplesite.com"
+baseURL = "http://www.tituslesley89.com/"
 languageCode = "en-us"
 title = "Project RED"
 theme = "liva-hugo"
 summaryLength = "10"
 paginate = 6
 disqusShortname = ""
+publishDir = "project-red.github.io"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
@@ -108,9 +109,10 @@ googleAnalitycsID = "Your ID"
 # Contact Information
 mobile = "0124857985320"
 email = "demo@email.com"
-location = "Sunnyvale, California"
+location = "Mountain View, California"
 # copyright
 copyright = "| Project RED |"
+custom_css = ["/css/custom.css"]
 
   # Preloader
   [params.preloader]

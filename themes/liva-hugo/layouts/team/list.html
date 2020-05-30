@@ -3,13 +3,21 @@
 <section class="section-sm">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 mx-auto text-center">
-        <img src="/images/full_logo_text_staggered_left.png" alt="" class="img-fluid d-block mx-auto mb-4">
-        <h4 class="widget-title">{{ .Title | markdownify }}</h4>
-        <div class="content">
-          {{ .Content }}
+      {{ range .Pages}}
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex">
+              <img src="{{ .Params.Image | absURL }}" class="rounded img-thumbnail d-inline-block" alt="{{ .Title | markdownify }}">
+              <div class="p-3">
+                <h5 class="card-title">{{ .Name | markdownify }}</h2>
+                  <p class="card-text"></p>{{ .Content }}</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      {{ end }}
     </div>
   </div>
 </section>

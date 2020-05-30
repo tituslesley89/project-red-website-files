@@ -7,5 +7,5 @@ draft: false
 description: "this is meta description"
 
 # type
-type : "blog"
+type : "featured"
 ---

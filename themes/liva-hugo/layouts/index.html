@@ -1,83 +1,52 @@
 {{ define "main" }}
-
-<!-- featured post -->
-<section class="section-sm">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-10 featured-post-slider">
-        <!-- slider item -->
-        {{ range ( where .Site.RegularPages "Type" "featured" )}}
-        <article class="card featured-post">
-          <div class="row no-gutters align-items-center">
-            <div class="col-md-5">
-              {{ if .Params.Image }}
-              <img src="{{ .Params.Image | absURL }}" class="card-img" alt="{{ .Title | markdownify }}">
-              {{ end }}
-            </div>
-            <div class="col-md-6 offset-md-1">
-              <div class="card-body">
-                <div class="mb-3 post-meta">
-                  <span>By {{ .Site.Params.Author }}</span>
-                  {{ if not .Params.HideDate }}
-                  <span class="border-bottom border-primary px-2 mx-1"></span>
-                  <span>{{ .PublishDate.Format "02 January 2006" }}</span>
-                  {{ end }}
-                </div>
-                <a href="{{ .Permalink }}"
-                  class="h1 font-weight-bold d-block text-dark mb-4 card-title">{{ .Title | markdownify }}</a>
-                <p class="card-text">{{.Summary}}...</p>
-              </div>
-            </div>
-          </div>
-        </article>
-        {{ end }}
-      </div>
-    </div>
-  </div>
-</section>
-<!-- /featured post -->
-
-<!-- recent post -->
-<section>
+<section class="p-4">
   <div class="container">
     <div class="row">
-      {{ range first 3 (where .Site.RegularPages "Type" "post")}}
-      <div class="col-lg-4 small-post-border">
-        <article class="media">
-          {{ if .Params.Image }}
-          <div class="recent-post-thumb mr-3" style="background-image: url('{{ .Params.Image | absURL }}');"></div>
-          {{ end }}
-          <div class="media-body">
-            <div class="mb-3 post-meta">
-              <span>By {{ .Site.Params.Author }}</span>
-              {{ if not .Params.HideDate }}
-              <span class="border-bottom border-primary px-2 mx-1"></span>
-              <span>{{ .PublishDate.Format "02 Jan 2006" }}</span>
-              {{ end }}
-            </div>
-            <a href="{{ .Permalink }}" class="h5 d-block mb-3">{{ .Title | markdownify }}</a>
-            <a href="{{ .Permalink }}" class="btn btn-outline-primary">read more</a>
-          </div>
-        </article>
+      <div class="col-md-5">
+        <h1 class="text-uppercase">
+          Design and distribute a Low Cost Ventailator.
+        </h1>
+        <h4>
+          Our mission is to build a low cost, high-quality ventilator for people who need it.
+        </h4>
+        <div class="p-2">
+          <a href="/about" class="font-size-25">Who we are?</a>
+        <span class="font-size-25">|</span>
+        <a href="/blog" class="font-size-25">Updates</a>
+        </div>
       </div>
-      {{ end }}
+      <div class="col-md-7">
+          <image src="https://d2g8igdw686xgo.cloudfront.net/48056506_1589412901297875_r.jpeg" class="img-fluid rounded"></image>
+      </div>
     </div>
-  </div>
-</section>
-<!-- /recent post -->
-
-<!-- blog post -->
-<section class="section pb-0">
-  <div class="container">
+    <hr>
+    <div class="row p-1">
+      <h4 class="p-2">Our Goal</h4>
+    </div>
     <div class="row">
-      <div class="col-lg-8 mb-5 mb-lg-0">
+      <div class="col-md-4">
+        <image src="https://d2g8igdw686xgo.cloudfront.net/48056506_1589412616963240_r.jpeg" class="img-fluid rounded"></image>
+      </div>
+      <div class="col-md-8">
+        <p>
+          Ventilator design is a highly complicated and niche field involving many engineering disciplines, medical knowledge and an understanding of rules and regulations. While many of the ongoing fast-turn attempts to build an emergency device are truly admirable, it is likely that most will either never make it to volume production, or prove too hazardous and unreliable for practical use. Two of the RED founders, Edward Ayrapetian and Mohan Gurunathan, have over 5 years of previous design experience working on medical ventilators. As engineers with a solid understanding of medical ventilator design, they are uniquely positioned to develop a fast-track ventilator solution which can be rapidly scaled up to help meet the needs of the global population.
+        </p>
+        <a href="/team" class="font-size-17">Who we are?</a>
+      </div>
+    </div>
+    <hr>
+    <div class="row p-1">
+      <h4 class="p-2">News</h4>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 mb-5 mb-lg-0">
         <div class="row">
           {{ $paginator := .Paginate (where .Site.RegularPages "Type" "post") }}
           {{ range $paginator.Pages }}
-          <div class="col-md-6 mb-4">
+          <div class="col-md-4 mb-4">
             <article class="card">
               {{ if .Params.Image }}
-              <img src="{{ .Params.Image | absURL }}" class="card-img-top" alt="{{ .Title | markdownify }}">
+              <img src="{{ .Params.Image | absURL }}" class="card-img-top rounded" alt="{{ .Title | markdownify }}">
               {{ end }}
               <div class="card-body px-0">
                 {{ range .Params.Categories }}
@@ -86,9 +55,7 @@
                 {{ end }}
                 <a href="{{ .Permalink }}" class="h5 d-block my-3">{{ .Title | markdownify }}</a>
                 <div class="mb-3 post-meta">
-                  <span>By {{ .Site.Params.Author }}</span>
                   {{ if not .Params.HideDate }}
-                  <span class="border-bottom border-primary px-2 mx-1"></span>
                   <span>{{ .PublishDate.Format "02 January 2006" }}</span>
                   {{ end }}
                 </div>
@@ -101,7 +68,7 @@
         </div>
       </div>
       <!-- sidebar -->
-      {{ partial "sidebar.html" . }}
+      <!-- {{ partial "sidebar.html" . }} -->
       <!-- /sidebar -->
 
       <!-- pagination -->
