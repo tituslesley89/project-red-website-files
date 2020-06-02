@@ -1,5 +1,9 @@
 {{ "<!-- navigation -->" | safeHTML }}
 <header class="navigation">
+  {{ range .Site.Params.custom_css -}}
+    <link rel="stylesheet" href="{{ . | absURL }}">
+  {{ end }}
+
   <div class="container">
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom">
@@ -39,7 +43,7 @@
           </li>
           {{ else }}
           <li class="nav-item">
-            <a class="nav-link" href="{{ .URL | absURL }}">{{ .Name }}</a>
+            <a class="nav-link font-size-17" href="{{ .URL | absURL }}">{{ .Name }}</a>
           </li>
           {{ end }}
           {{ end }}
@@ -66,8 +70,5 @@
       </div>
     </nav>
   </div>
-  {{ range .Site.Params.custom_css -}}
-    <link rel="stylesheet" href="{{ . | absURL }}">
-  {{ end }}
 </header>
 {{ "<!-- /navigation -->" | safeHTML }}

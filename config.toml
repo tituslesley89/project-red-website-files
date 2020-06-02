@@ -56,19 +56,24 @@ publishDir = "project-red.github.io"
   weight = 2
   
   [[menu.main]]
-  name = "News"
+  name = "Updates"
   URL = "blog"
   weight = 3
+
+  [[menu.main]]
+  name = "Partners"
+  URL = "partners"
+  weight = 4
   
   [[menu.main]]
   name = "Contact"
   URL = "contact"
-  weight = 4
+  weight = 5
 
   [[menu.main]]
   name = "Donate"
-  URL = "https://www.gofundme.com/f/respiratory-emergency-device-red-ventilator"
-  weight = 5
+  URL = "donate"
+  weight = 6
 
   # footer menu
   [[menu.footer]]
@@ -82,24 +87,29 @@ publishDir = "project-red.github.io"
   weight = 2
   
   [[menu.footer]]
-  name = "News"
+  name = "Updates"
   URL = "blog"
   weight = 3
+
+  [[menu.footer]]
+  name = "Partners"
+  URL = "partners"
+  weight = 4
   
   [[menu.footer]]
   name = "Contact"
   URL = "contact"
-  weight = 4
+  weight = 5
 
   [[menu.footer]]
   name = "Donate"
-  URL = "https://www.gofundme.com/f/respiratory-emergency-device-red-ventilator"
-  weight = 5
+  URL = "donate"
+  weight = 6
 
 
 #################### default parameters ################################
 [params]
-logo = "images/logo.png"
+logo = "images/logo_with_caption.png"
 home = "Home"
 # Meta data
 description = "Project RED - A low-cost Ventilator project"

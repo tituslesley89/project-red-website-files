@@ -1,7 +1,9 @@
 <div class="col-md-6 mb-4">
     <article class="card">
         {{ if .Params.Image }}
-        <img src="{{ .Params.Image | absURL }}" class="card-img-top rounded" alt="{{ .Title | markdownify }}">
+        <a href="{{ .Permalink }}">
+            <img src="{{ .Params.Image | absURL }}" class="card-img-top rounded" alt="{{ .Title | markdownify }}">
+        </a>
         {{ end }}
         <div class="card-body px-0">
         {{ range .Params.Categories }}

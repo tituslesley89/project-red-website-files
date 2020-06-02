@@ -5,3 +5,12 @@
 .font-size-17 {
     font-size: 17px;
 }
+
+.home-page-title {
+    font-size: 30px !important;
+    color: black !important;
+}
+
+.home-page-image {
+    width: 32em;
+}
