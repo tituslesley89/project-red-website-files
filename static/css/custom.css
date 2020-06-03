@@ -14,3 +14,13 @@
 .home-page-image {
     width: 32em;
 }
+
+.bg-footer {
+    background-color: #D3D3D3;
+    border-top: #808080;
+    border-top-width: 3px;
+}
+
+.avatar-container {
+    width: 200px;
+}
