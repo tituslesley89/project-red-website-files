@@ -1,17 +1,25 @@
 {{ define "main" }}
 
-<section class="section-sm">
+<section class="pt-4" id="container">
   <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2>Team</h2>
+      </div>
+    </div>
     <div class="row">
       {{ range .Pages}}
       <div class="col-sm-6">
         <div class="card">
           <div class="card-body">
             <div>
-              <img src="{{ .Params.Image | absURL }}" class="rounded img-thumbnail float-left avatar-container mx-3" alt="{{ .Title | markdownify }}">
-              <div class="p-3">
-                <h5 class="card-title">{{ .Name | markdownify }}</h2>
-                  <p class="card-text"></p>{{ .Content }}</p>
+              <img src="{{ .Params.Image | absURL }}" class="rounded img-thumbnail float-left avatar-container mr-3"
+                alt="{{ .Title | markdownify }}">
+              <div>
+                <h5 class="card-title">{{ .Params.Name | markdownify }}
+                  <p class="font-italic text-secondary">{{ .Params.Role | markdownify }}</p>
+                </h2>
+                  <p class="card-text">{{ .Content }}</p>
               </div>
             </div>
           </div>

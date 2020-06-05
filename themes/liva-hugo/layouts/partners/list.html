@@ -1,11 +1,36 @@
 {{ define "main" }}
 
-<!-- blog post -->
-<section class="section-sm">
+<section class="pt-4">
     <div class="container">
-    <h2>Partners</h2>
-</div>
+        <div class="row pb-3">
+            <div class="col-12">
+              <h2>Partners</h2>
+            </div>
+          </div>
+          <div class="row pb-3">
+              <div class="col-12">
+                  <p>Project RED is grateful for all the support it gets from our partners.</p>
+              </div>
+          </div>
+        {{ range .Pages}}
+        <div class="row">
+            <div class="col-4">
+                <img src="{{ .Params.Image | absURL }}" class="rounded img-fluid"
+                    alt="{{ .Title | markdownify }}">
+            </div>
+            <div class="col-8">
+                <h5 class="card-title">
+                    {{ .Params.Name | markdownify }}
+                </h2>
+                <p class="card-text text-justify">{{ .Content }}</p>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+    </div>
+    <div style="height: 44vh;">
+
+    </div>
 </section>
-<!-- /blog post -->
 
 {{ end }}
