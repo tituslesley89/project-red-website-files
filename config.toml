@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "http://www.tituslesley89.com/"
+baseURL = "http://redventilator.org"
 languageCode = "en-us"
 title = "Project RED"
 theme = "liva-hugo"
