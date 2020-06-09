@@ -120,7 +120,7 @@ googleAnalitycsID = "Your ID"
 mobile = "415-713-4081"
 email = "info@redventilator.org"
 emailUrl = "mailto:info@redventilator.org"
-location = "Mountain View, California"
+location = "Mountain View, California, USA"
 # copyright
 copyright = "| Project RED |"
 custom_css = ["/css/custom.css"]
