@@ -13,10 +13,12 @@
               </div>
           </div>
         {{ range .Pages}}
-        <div class="row">
+        <div class="row pb-5">
             <div class="col-4">
-                <img src="{{ .Params.Image | absURL }}" class="rounded img-fluid"
-                    alt="{{ .Title | markdownify }}">
+                    <a href="{{ .Params.Link }}" target="_blank" rel="noreferrer">
+                        <img src="{{ .Params.Image | absURL }}" class="rounded img-fluid center-img"
+                            alt="{{ .Title | markdownify }}"/>
+                        </a>
             </div>
             <div class="col-8">
                 <h5 class="card-title">
