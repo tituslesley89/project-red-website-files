@@ -24,7 +24,7 @@
   <div class="bg-footer pb-5">
       <div class="container">
         <div class="row">
-          <div class="col-11">
+          <div class="col-10">
             <nav class="breadcrumb p-0 pt-3 bg-transparent footer-font-size" aria-label="breadcrumb">
               <ol class="breadcrumb p-0 m-0 d-flex justify-content-between bg-transparent">
                 {{ range .Site.Menus.main }}
@@ -34,10 +34,16 @@
                 {{ end }}
               </ol>
             </nav>
-            <p class="text-muted">{{ .Site.Params.email }}</p>
           </div>
-          <div class="col-1">
-            <img src="/images/footer_logo.png" class="img-fluid pt-1" />
+          <div class="col-2">
+            <div class="footer-logo-size mx-auto pt-1">
+              <img src="/images/footer_logo.png" class="img-fluid" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="w-100">
+            <p class="text-muted text-right">{{ .Site.Params.email }}</p>
           </div>
         </div>
         </div>

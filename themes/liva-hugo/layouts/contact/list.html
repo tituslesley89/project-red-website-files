@@ -7,7 +7,7 @@
         <h2>{{ .Title | markdownify }}</h2>
         <div class="row p-2 ">
           <div class="text-center">
-            <p>
+            <p class="text-justify">
             We welcome inquires from engineers who may be interested to contribute to Project Red. We are also
             interested to hear from medical professionals, non-profits, government agencies, and people anywhere in the
             world who may anticipate a need for ventilators in the near future. Media inquiries are also welcome.
@@ -17,18 +17,18 @@
         <div class="row">
           <div class="col-lg-4 small-post-border">
             <i class="ti-mobile h1 text-primary"></i>
-            <h5 class="font-weight-light my-3">Phone</h5>
-            {{ .Site.Params.mobile }}
+            <h5 class="font-weight-light my-3 font-size-25">Phone</h5>
+            <p class="font-size-25">{{ .Site.Params.mobile }}</p>
           </div>
           <div class="col-lg-4 small-post-border">
             <i class="ti-email h1 text-primary"></i>
-            <h5 class="font-weight-light my-3">Email</h5>
-            <a href="{{ .Site.Params.emailUrl }}"> {{ .Site.Params.email }}</a>
+            <h5 class="font-weight-light my-3 font-size-25">Email</h5>
+            <p><a href="{{ .Site.Params.emailUrl }}" class="font-size-25"> {{ .Site.Params.email }}</a></p>
           </div>
           <div class="col-lg-4 small-post-border">
             <i class="ti-location-pin h1 text-primary"></i>
-            <h5 class="font-weight-light my-3">Location</h5>
-            {{ .Site.Params.location | markdownify }}
+            <h5 class="font-weight-light my-3 font-size-25">Location</h5>
+            <p class="font-size-25">{{ .Site.Params.location | markdownify }}</p>
           </div>
         </div>
       </div>

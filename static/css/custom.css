@@ -37,6 +37,11 @@
     font-size: 19px;
 }
 
+.footer-logo-size {
+    height: 65px;
+    width: 65px;
+}
+
 .pt-40 {
     padding-top: 40px;
 }
