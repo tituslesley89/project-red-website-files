@@ -5,9 +5,9 @@
       <div class="col-md-6">
         <p class="home-page-title text-center pt-40">
           We are a non-profit developing
-          an <strong>affordable, highly reliable ventilator</strong> 
+          an <strong>affordable, highly reliable ventilator</strong>
           to provide life-support for anyone in the world who needs it.
-        </h4>
+          </h4>
         <div class="text-center pt-30">
           <a href="/about" class="font-size-25">Who we are </a>
           <span class="font-size-25 px-3"> | </span>
@@ -15,7 +15,8 @@
         </div>
       </div>
       <div class="col-md-6">
-          <image src="https://d2g8igdw686xgo.cloudfront.net/48056506_1589412901297875_r.jpeg" class="img-fluid rounded"></image>
+        <image src="https://d2g8igdw686xgo.cloudfront.net/48056506_1589412901297875_r.jpeg" class="img-fluid rounded">
+        </image>
       </div>
     </div>
     <hr>
@@ -23,12 +24,23 @@
       <h4 class="py-2">Our Goal</h4>
     </div>
     <div class="row">
-        <p>
-          <image src="/images/patient/icu_img.png" class="home-page-image rounded float-left mr-3"></image>
-          <strong> Our goal is to develop an emergency ventilator which is affordable ($3K to $4K), reliable, easy to build, intuitive to use, and effective at treating the most common respiratory conditions associated with COVID-19 and similar illnesses. </strong> We have developed an initial working prototype and are currently working towards building 9 more units as we refine the design.  Once the design is finalized, our plan is to license the design to governments and/or NGOs who are qualified to manufacture and distribute these ventilators in regions of need, and who agree to keep the product affordable for consumers.
-<br><br>There are many teams now working on low-cost ventilator designs, but <strong> what distinguishes Project RED is that our founders have experience designing ventilators. </strong> As engineers with a solid understanding of medical ventilator design, we are uniquely positioned to develop a fast-track ventilator solution which can be rapidly scaled up to help meet the needs of the global population.
-<br><br>Project RED is a non-profit, non-salaried organization, powered by passionate and creative volunteers and makers, and enabled by the support of generous donors.  Please consider <a href="/donate">supporting us</a> to help bring affordable, life-saving healthcare to regions of the world where it is desperately needed.  Thank you!
-        </p>
+      <p>
+        <image src="/images/patient/icu_img.png" class="home-page-image rounded float-left mr-3"></image>
+        <strong> Our goal is to develop an emergency ventilator which is affordable ($3K to $4K), reliable, easy to
+          build, intuitive to use, and effective at treating the most common respiratory conditions associated with
+          COVID-19 and similar illnesses. </strong> We have developed an initial working prototype and are currently
+        working towards building 9 more units as we refine the design. Once the design is finalized, our plan is to
+        license the design to governments and/or NGOs who are qualified to manufacture and distribute these ventilators
+        in regions of need.
+        <br><br>There are many teams now working on low-cost ventilator designs, but <strong> what distinguishes Project
+          RED is that our founders have experience designing ventilators. </strong> As engineers with a solid
+        understanding of medical ventilator design, we are uniquely positioned to develop a fast-track ventilator
+        solution which can be rapidly scaled up to help meet the needs of the global population.
+        <br><br>Project RED is a non-profit, non-salaried organization, powered by passionate and creative volunteers
+        and makers, and enabled by the support of generous donors. Please consider <a href="/donate">supporting us</a>
+        to help bring affordable, life-saving healthcare to regions of the world where it is desperately needed. Thank
+        you!
+      </p>
     </div>
     <hr>
     <div class="row p-1">
@@ -43,7 +55,7 @@
             <article class="card">
               {{ if .Params.Image }}
               <a href="{{ .Permalink }}">
-              <img src="{{ .Params.Image | absURL }}" class="card-img-top rounded" alt="{{ .Title | markdownify }}">
+                <img src="{{ .Params.Image | absURL }}" class="card-img-top rounded" alt="{{ .Title | markdownify }}">
               </a>
               {{ end }}
               <div class="card-body px-0">

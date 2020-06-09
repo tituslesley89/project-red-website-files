@@ -119,6 +119,7 @@ googleAnalitycsID = "Your ID"
 # Contact Information
 mobile = "415-713-4081"
 email = "info@redventilator.org"
+emailUrl = "mailto:info@redventilator.org"
 location = "Mountain View, California"
 # copyright
 copyright = "| Project RED |"
