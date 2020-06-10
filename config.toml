@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "http://redventilator.org"
+baseURL = "https://redventilator.org"
 languageCode = "en-us"
 title = "Project RED"
 theme = "liva-hugo"
