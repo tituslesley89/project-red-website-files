@@ -1,0 +1,36 @@
+---
+title: "FiO2 Mixing Demonstration"
+date: 2020-06-12T13:49:23+06:00
+draft: false
+
+# meta description
+description: "Air and O2 mixture"
+
+image : "/images/updates/air_mix_update.png"
+
+# type
+type : "post"
+---
+
+<p>
+    Hi all, today is a big milestone for our ventilator development. We successfully demonstrated mixing Air & O2 to a
+    target ratio (FiO2)! This is a critically important feature for the ventilator to have. The ventilator mixes room
+    air with O2 from a compressor. Attached is a data trace showing some data we recorded during our mixing test. In the
+    center plot, you can see the flow of O2 in blue, the flow of air in yellow, and the total gas flow in green. In the
+    bottom plot you can see the integrated volumes of air, O2, and total gas volume. In this test we are mixing to an
+    FiO2 of 86%, but we've successfully mixed to several other ratios as well.
+</p>
+
+<p>
+    Here is a real-time video of our ventilator diagnostic program, showing how we can
+    mix air and oxygen to a target ratio (also called "FiO2.") There's a lot going on this screen, so pay attention
+    mostly to the second and third plot from the top, and the user entry box called "FiO2" on the left hand panel. You
+    can see when the user changes the "FiO2" setting in the left hand panel, the flow levels for air (yellow) and O2
+    (blue) change in the second plot. The third plot shows the integrated volumes for air, O2, and total volume. You can
+    see that the mix ratio tracks the user's input. There's still some fine-tuning required, but this is an important
+    proof of concept demo!
+</p>
+
+<div class="mx-auto pt-3">
+    {{< youtube Rs5BbE0GVak >}}
+</div>
