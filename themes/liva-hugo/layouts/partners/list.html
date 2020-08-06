@@ -15,7 +15,7 @@
         {{ range .Pages}}
         <div class="row pb-5">
             <div class="col-4">
-                    <a href="{{ .Params.Link }}" target="_blank" rel="noreferrer">
+                    <a href="{{ .Params.Link }}" target="_blank">
                         <img src="{{ .Params.Image | absURL }}" class="rounded img-fluid center-img"
                             alt="{{ .Title | markdownify }}"/>
                         </a>
