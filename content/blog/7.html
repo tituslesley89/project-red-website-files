@@ -1,0 +1,125 @@
+---
+title: "CAD Design Renders"
+date: 2020-10-07T13:49:23+06:00
+draft: false
+
+# meta description
+description: "CAD Design Renders"
+
+image : "/images/updates/CAD_render.png"
+
+# type
+type : "post"
+---
+
+<p>
+    Hello Project RED supporters!
+
+    Apologies that we have not issued a project update in a while, but we have been very busy with ventilator
+    development! And a lot has happened in the past three months.
+
+    After three months of close work with our friends at Paaila Technology, we have finished the complete mechanical CAD
+    design of the RED-1 ventilator. Below are some pictures showing the external and internal appearance of the
+    ventilator. We were able to achieve an appearance and style very similar to the concept drawing we started with. We
+    have also partnered with a manufacturing company in China (HLH Prototypes) who will be making the first ventilator
+    prototypes for us based on this design. We've already released parts to them to start producing the first few
+    ventilators.
+
+</p>
+
+<img src="/images/updates/7/image1.png" />
+<img src="/images/updates/7/image3.png" />
+<img src="/images/updates/7/image6.jpg" />
+<img src="/images/updates/7/image11.png" />
+
+<p>
+    (For a more detailed walk through the internals of the ventilator, jump ahead to the next section)
+    In August, we built three new bench-top ventilator systems for use in software development. A picture of the three
+    systems, and a video of one of them up and running, are below.
+</p>
+
+<img class="img-fluid rounded" src="/images/updates/7/image2.jpg" />
+
+{{< youtube 13sj_DqRPNY >}}
+
+<p>
+    Also, software development is going extremely well. We worked closely with ICS to come up with a flexible,
+    extensible communication protocol between the ventilator microprocessor and the GUI processor. This protocol allows
+    us to easily re-configure the GUI design to accommodate new modes of ventilation in the future. Initially, we plan
+    to implement Pressure Control Ventilation (PCV) and Pressure Regulated Volume Control (PRVC) modes, but soon after
+    we plan to deploy additional modes such as PSV and SIMV.
+
+    A video of our GUI, running and plotting real data gathered from one of our prototypes, is below:
+</p>
+
+{{< youtube am4B--JkNgo >}}
+
+<p>
+    By November we expect to have several fully functional ventilators running in the actual ventilator enclosure!
+</p>
+
+<h3>Ventilator Design Walkthrough</h3>
+
+<p>
+    We developed the mechanical internals of the ventilator in a modular fashion. There are custom blocks to handle
+    specific functions, such as air filtering, O2 metering, gas mixing, safety valves, etc. We also focused heavily on
+    ease-of-manufacturing. The major components of the design are shown below:
+</p>
+
+<img src="/images/updates/7/image14.png" />
+
+<p>The Blower Module, O2 Manifold, Gas Mixing Manifold, Insp Manifold, and Exp Manifold are all custom sub-assemblies
+    designed by Project RED engineers. Some closer views of these design blocks are provided below.</p>
+
+<img src="/images/updates/7/image10.png" />
+<img src="/images/updates/7/image9.png" />
+<img src="/images/updates/7/image13.png" />
+
+<p>We placed a lot of thought into making the ventilator easy to build. A key feature in this regard is that all of the
+    Inspiratory components are located on a removable metal “tray”:
+</p>
+
+<img src="/images/updates/7/image8.png" />
+
+<p>
+    The tray has pressed-in (PEM) nuts and standoffs, so a technician can simply screw down the sub-modules to the tray,
+    attach tubes and clamps, and then drop the tray into the enclosure shell. The enclosure shell also has pressed-in
+    standoffs for accepting the tray. The enclosure shell is made of 2mm thick aluminum sheet metal, bent and
+    seam-welded together, so it should be extremely rugged. The enclosure is shown below:
+</p>
+<img src="/images/updates/7/image1.png" />
+
+<p>
+    Another important feature of the design is the “Expiratory Cartridge.” The Expiratory cartridge handles all exhaled
+    gas from a patient, and lives on a sliding rail so it can be removed from the ventilator. This is because exhaled
+    gas from the patient may be contaminated; therefore, it is good practice to keep the expiratory circuits isolated
+    from the inspiratory circuits, to prevent contamination of the ventilator. (Normally an external bacterial/viral
+    filter should also be used on the expiratory limb of the patient circuit). All expired gases are contained within
+    tubing inside the Expiratory cartridge, and then filtered again before leaving the cartridge. In case there are
+    small leaks within the tubing in the cartridge, there is a sheet metal cover for the cartridge which greatly reduces
+    the risk of contaminants entering the upper part of the ventilator. For decontamination purposes, the cartridge can
+    be detached from the ventilator and sent for cleaning.
+
+    Since the Expiratory cartridge has electronics on it, we had to develop a solution for mating/de-mating an
+    electronic connector when the cartridge was inserted or removed. Maintaining alignment of the connector halves was a
+    tricky problem, but we believe we have a solution that will work, and we will be testing it when the first prototype
+    units come back next month.
+
+    The Expiratory cartridge is shown (both with and without cover) below.
+</p>
+
+<img src="/images/updates/7/image7.png" />
+
+<p>
+    Finally, there is a simple subassembly for the front-cover, which consists of sheet metal, two speakers, an LED
+    light bar, the LCD touchscreen, and some simple brackets:
+</p>
+
+<img src="/images/updates/7/image4.png" />
+
+<p>
+    All in all we are very pleased with how the design has turned out, and we can’t wait to test the first few units in
+    November. The best news, perhaps, is that after pricing out most of the custom mechanical parts, we are quite
+    confident that this ventilator can be built for well under $4000 USD, even at relatively small quantities (100 units
+    or less) !
+</p>
